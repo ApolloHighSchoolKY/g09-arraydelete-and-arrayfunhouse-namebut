@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class ArrayFunHouse
 {
-	//Instance Variables
+	//Instance Fields
 	private int[] numArray;
 
 	//Default Constructor
@@ -19,18 +19,18 @@ public class ArrayFunHouse
 		//Two ways to transfer in the array
 		numArray=newArray;
 
-		//The other way is to create a new array based on the size of the
-		//parameter and then transfer all of the data one value at a time from
-		//the new into the instance
-
+		//The other way is to create a new array based on the size of the parameter and then transfer all of the data one value at a time from the new into the instance
 	}
 
-	//getSum() will return the sum of the numbers from start to stop,
-	//not including stop
+	//getSum() will return the sum of the numbers from start to stop, not including stop
 	public int getSum(int start, int stop)
 	{
 		int sum = 0;
-
+		
+		for(int i = start; i < stop; i++)
+		{
+			sum += numArray[i];
+		}
 
 		return sum;
 	}
@@ -39,7 +39,13 @@ public class ArrayFunHouse
 	public int getCount(int val)
 	{
 		int count=0;
-
+		for(int x: numArray)
+		{
+			if(x==val)
+			{
+				count++;
+			}
+		}
 
 
 		return count;
